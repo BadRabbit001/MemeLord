@@ -129,7 +129,7 @@ async def on_message(message):
         await message.author.send(msg + (random.choice(randomlist)))
                        
     if message.content.startswith('!familyowner'):
-        randomlist = ['https://direct-link.net/27527/familyowner','https://direct-link.net/27527/familyowner','https://direct-link.net/27527/familyowner']
+        randomlist = ['Not in stock','Not in stock','Not in stock']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
                                
