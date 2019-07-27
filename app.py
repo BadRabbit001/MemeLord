@@ -139,7 +139,7 @@ async def on_message(message):
         await message.author.send(msg + (random.choice(randomlist)))
        
     if message.content.startswith('!help'):
-        await message.author.send("https://rabbit001.cf/bot/commands.html")
+        await message.author.send("Check #how_to_gen")
        
        
     if message.content.startswith('!purge'):
