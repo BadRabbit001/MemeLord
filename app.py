@@ -84,12 +84,12 @@ async def on_message(message):
         await message.author.send(msg + (random.choice(randomlist)))
        
     if message.content.startswith('!nord'):
-        randomlist = ['https://filemedia.net/27527/NordVPN','https://filemedia.net/27527/NordVPN2','https://filemedia.net/27527/NordVPN3']
+        randomlist = ['https://link-to.net/33298/23421','https://link-to.net/33298/43452','https://link-to.net/33298/23423']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
        
     if message.content.startswith('!spotify'):
-        randomlist = ['https://direct-link.net/27527/spotify4','https://direct-link.net/27527/spotify4','https://direct-link.net/27527/spotify3']
+        randomlist = ['https://link-to.net/33298/980907','https://link-to.net/33298/878789','https://link-to.net/33298/67867','https://link-to.net/33298/896786','https://link-to.net/33298/89787']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
  
@@ -109,7 +109,7 @@ async def on_message(message):
         await message.author.send(msg + (random.choice(randomlist)))
        
     if message.content.startswith('!udemy'):
-        randomlist = ['https://filemedia.net/27527/udemy2','https://up-to-down.net/27527/udemy','https://up-to-down.net/27527/udemy']
+        randomlist = ['Not in stock!','Not in stock!','Not in stock!']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
                
@@ -124,7 +124,7 @@ async def on_message(message):
         await message.author.send(msg + (random.choice(randomlist)))
                
     if message.content.startswith('!scribd'):
-        randomlist = ['https://direct-link.net/27527/Scribd','https://direct-link.net/27527/Scribd','https://direct-link.net/27527/Scribd']
+        randomlist = ['Not in stock!','Not in stock!','Not in stock!']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
                        
