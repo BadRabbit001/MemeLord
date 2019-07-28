@@ -70,7 +70,7 @@ async def on_message(message):
         await message.channel.send(msg)
                
     if message.content.startswith('!Spotify'):
-        randomlist = ['https://direct-link.net/27527/spotify2','https://direct-link.net/27527/spotify4','https://direct-link.net/27527/spotify2']
+        randomlist = ['https://link-to.net/33298/980907','https://link-to.net/33298/878789','https://link-to.net/33298/67867','https://link-to.net/33298/896786','https://link-to.net/33298/89787']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
        
