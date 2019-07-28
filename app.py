@@ -94,7 +94,7 @@ async def on_message(message):
         await message.author.send(msg + (random.choice(randomlist)))
  
     if message.content.startswith('!origin'):
-        randomlist = ['https://link-to.net/27527/origin','https://link-to.net/27527/origin','https://link-to.net/27527/origin']
+        randomlist = ['https://link-to.net/33298/675678','https://link-to.net/33298/98787','https://link-to.net/33298/7868','https://link-to.net/33298/875658']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
                
@@ -104,7 +104,7 @@ async def on_message(message):
         await message.author.send(msg + (random.choice(randomlist)))
        
     if message.content.startswith('!steam'):
-        randomlist = ['https://filemedia.net/27527/steam    ','https://filemedia.net/27527/steam    ','https://filemedia.net/27527/steam    ']
+        randomlist = ['Not in stock!    ','Not in stock!    ','Not in stock!    ']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
        
@@ -114,12 +114,12 @@ async def on_message(message):
         await message.author.send(msg + (random.choice(randomlist)))
                
     if message.content.startswith('!uplay'):
-        randomlist = ['https://up-to-down.net/27527/uplay2','https://up-to-down.net/27527/uplay2','https://up-to-down.net/27527/uplay']
+        randomlist = ['https://link-to.net/33298/23342','https://link-to.net/33298/234213','https://link-to.net/33298/234114','https://link-to.net/33298/424215','https://link-to.net/33298/254252']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
        
     if message.content.startswith('!crunchyroll'):
-        randomlist = ['https://up-to-down.net/27527/crunchyroll','https://up-to-down.net/27527/crunchyroll','https://up-to-down.net/27527/crunchyroll']
+        randomlist = ['Not in stock!','Not in stock!','Not in stock!']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
                
@@ -134,7 +134,7 @@ async def on_message(message):
         await message.author.send(msg + (random.choice(randomlist)))
                                
     if message.content.startswith('!minecraft'):
-        randomlist = ['https://link-to.net/27527/Minecraft001','https://up-to-down.net/27527/minecrafts','https://filemedia.net/27527/Minecraft']
+        randomlist = ['https://link-to.net/33298/5353','https://link-to.net/33298/345353','https://link-to.net/33298/56356']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
        
