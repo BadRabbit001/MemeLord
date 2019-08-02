@@ -70,7 +70,7 @@ async def on_message(message):
         await message.channel.send(msg)
                
     if message.content.startswith('!Spotify'):
-        randomlist = ['https://link-to.net/33298/980907','https://link-to.net/33298/878789','https://link-to.net/33298/67867','https://link-to.net/33298/896786','https://link-to.net/33298/89787']
+        randomlist = ['https://filemedia.net/33298/67676','https://filemedia.net/33298/66567','https://filemedia.net/33298/65675','https://filemedia.net/33298/655645','https://link-to.net/33298/89787']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
        
@@ -89,17 +89,17 @@ async def on_message(message):
         await message.author.send(msg + (random.choice(randomlist)))
        
     if message.content.startswith('!spotify'):
-        randomlist = ['https://link-to.net/33298/980907','https://link-to.net/33298/878789','https://link-to.net/33298/67867','https://link-to.net/33298/896786','https://link-to.net/33298/89787']
+        randomlist = ['https://filemedia.net/33298/67676','https://filemedia.net/33298/66567','https://filemedia.net/33298/65675','https://filemedia.net/33298/655645','https://link-to.net/33298/89787']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
  
     if message.content.startswith('!origin'):
-        randomlist = ['https://link-to.net/33298/675678','https://link-to.net/33298/98787','https://link-to.net/33298/7868','https://link-to.net/33298/875658']
+        randomlist = ['https://filemedia.net/33298/23412','https://filemedia.net/33298/212313','https://filemedia.net/33298/212234']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
                
     if message.content.startswith('!hulu'):
-        randomlist = ['https://direct-link.net/33298/hulu','https://link-to.net/33298/hulu0989','https://link-to.net/33298/989890']
+        randomlist = ['https://filemedia.net/33298/89089','https://filemedia.net/33298/808098','https://filemedia.net/33298/88798']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
        
