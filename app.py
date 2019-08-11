@@ -84,7 +84,7 @@ async def on_message(message):
         await message.author.send(msg + (random.choice(randomlist)))
        
     if message.content.startswith('!nord'):
-        randomlist = ['https://link-to.net/33298/23421','https://link-to.net/33298/43452','https://link-to.net/33298/23423']
+        randomlist = ['https://direct-link.net/33298/428937','https://link-to.net/33298/43452','https://direct-link.net/33298/47261']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
        
@@ -114,7 +114,7 @@ async def on_message(message):
         await message.author.send(msg + (random.choice(randomlist)))
                
     if message.content.startswith('!uplay'):
-        randomlist = ['https://link-to.net/33298/23342','https://link-to.net/33298/234213','https://link-to.net/33298/234114','https://link-to.net/33298/424215','https://link-to.net/33298/254252']
+        randomlist = ['https://direct-link.net/33298/326536','https://direct-link.net/33298/325672']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
        
@@ -134,7 +134,7 @@ async def on_message(message):
         await message.author.send(msg + (random.choice(randomlist)))
                                
     if message.content.startswith('!minecraft'):
-        randomlist = ['https://link-to.net/33298/5353','https://link-to.net/33298/345353','https://link-to.net/33298/56356']
+        randomlist = ['https://direct-link.net/33298/76781','https://link-to.net/33298/345353','https://direct-link.net/33298/75681']
         msg = 'Hello ' + author + '. Your link: '
         await message.author.send(msg + (random.choice(randomlist)))
        
