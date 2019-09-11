@@ -1,136 +1,152 @@
-# Work with Py xxx
+# Work with Python xxx
 import discord
 from discord.ext import commands, tasks
 import os
 import asyncio
 import random
-import time
 from itertools import cycle
 from discord.utils import get
-from discord import Game
-import os
-
+ 
 client = commands.Bot(command_prefix='!')
 #client = discord.Client()
-Clientdiscord = discord.Client()
-
+ 
 #create an arraylist containing phrases you want your bot to switch through.
-status = cycle(['web: www.rabbit001.cf', 'With BlackRabbit', 'discord.gg/cZ8GcPF', '!cmds for commands', '!cmds'])
-
-client.remove_command('help')
-
+status = cycle(['with chocolate'])
+ 
 @client.command()
-async def clr(ctx, amount=5):
+async def lala(ctx):
+    check_role = get(ctx.message.guild.roles, name='Leader')
+    if check_role in ctx.author.roles:
+        await ctx.send("Yes, you are the leader.")
+ 
+    else:
+        await ctx.send("You can't use this")
+ 
+@client.command()
+async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
-
+ 
 @client.command()
 async def ban(ctx):
     check_role = get(ctx.message.guild.roles, name='BAN-SQUAD')
     if check_role in ctx.author.roles:
         await ctx.send("https://gifimage.net/wp-content/uploads/2017/07/ban-hammer-gif-14.gif")
     else:
-        await ctx.send("You can't use this!")
-
-
+        await ctx.send("You can't use this")
+   
 @client.event
 async def on_ready():
-    print("=======================================")
-    print()
-    print("Hello BlackRabbit#3981")
-    print("client id :", client.user.id)
-    print()
-    print("=======================================")
-    game = discord.Game("")
-    await client.change_presence(status=discord.Status.online, activity=game)
-
-
-
+    print("Bot Was Deployed Sucessfully !")
+    while True:
+        await client.change_presence(game=Game(name='with BadRabbit'))
+        await asyncio.sleep(3)
+        await client.change_presence(game=Game(name='with Generator'))
+        await asyncio.sleep(3)
+        await client.change_presence(game=Game(name='this Server', type = 3))
+        await asyncio.sleep(3)
+        await client.change_presence(game=Game(name='Viktor Sheen', type = 2))
+        await asyncio.sleep(3)
+ 
+ 
 @client.event
 async def on_message(message):
-    message.content = message.content.lower().replace(' ', '')
-if message.content.startswith("!nord"):
-        print(message.author.name)
-        embed = discord.Embed(title="`NordVPN acc`", color=0xFF09D7)
-        embed.add_field(name="Your link:", value="https://direct-link.net/33298/428937", inline=False)
-		embed.add_field(name="Your link #2:", value="https://link-to.net/33298/43452", inline=False)
-		embed.add_field(name="Your link #3:", value="https://direct-link.net/33298/47261", inline=False)
-        embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
-        await message.author.send(embed=embed)     
-        
-    if message.content.startswith("!cmds"):
-        print(message.author.name)
-        embed = discord.Embed(title="**COMMANDS**", color=0xFF09D7)
-        embed.add_field(name="Visit my website for list of commands:", value="http://rabbit001.cf/commands.html", inline=False)
-        embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
-        await message.author.send(embed=embed)
-        
-    if message.content.startswith("!commands"):
-        print(message.author.name)
-        embed = discord.Embed(title="**COMMANDS**", color=0xFF09D7)
-        embed.add_field(name="Visit my website for list of commands:", value="http://rabbit001.cf/commands.html", inline=False)
-        embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
-        await message.author.send(embed=embed)
-
-        
-    if message.content.startswith("!minecrafts"):
-        print(message.author.name)
-        embed = discord.Embed(title="`Minecraft acc`", color=0x400cc1)
-        embed.add_field(name="Your link:", value="https://direct-link.net/33298/76781", inline=False)
-        embed.add_field(name="Link #2:", value="https://link-to.net/33298/345353", inline=False)
-        embed.add_field(name="Link #3:", value="https://direct-link.net/33298/75681", inline=False)
-        embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
-        await message.author.send(embed=embed)
-		
-	if message.content.startswith("!stock"):
-        print(message.author.name)
-        embed = discord.Embed(title="`Stock`", color=0x400cc1)
-        embed.add_field(name="Stock:", value="!Spotify", inline=False)
-        embed.add_field(name=":", value="!Nord", inline=False)
-        embed.add_field(name="", value="!Hulu", inline=False)
-		embed.add_field(name="", value="!Uplay", inline=False)
-		embed.add_field(name="", value="!Minecraft", inline=False)
-        embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
-        await message.author.send(embed=embed)
-        
-
-    if message.content.startswith("!hulu"):
-        print(message.author.name)
-        embed = discord.Embed(title="`Hulu acc`", color=0x40cc55)
-        embed.add_field(name="Your link:", value="https://filemedia.net/33298/89089", inline=False)
-        embed.add_field(name="Link #2:", value="https://filemedia.net/33298/808098", inline=False)
-		embed.add_field(name="Link #3:", value="https://filemedia.net/33298/88798", inline=False)
-        embed.add_field(name="Invite this bot on your server!", value="https://discordapp.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
-        await message.author.send(embed=embed)
-        
-        
-    if message.content.startswith("!origin"):
-        print(message.author.name)
-        embed = discord.Embed(title="`Origin acc`", color=668000)
-        embed.add_field(name="Your link:", value="https://filemedia.net/33298/23412", inline=False)
-        embed.add_field(name="Your link #2:", value="https://filemedia.net/33298/212313", inline=False)
-        embed.add_field(name="Invite this bot on your server!", value="https://discordappf.com/oauth2/authorize?client_id=604967241863397376&permissions=8&scope=bot", inline=False)
-        await message.author.send(embed=embed)
-
-    if message.content.startswith("!uplay"):
-        print(message.author.name)
-        embed = discord.Embed(title="`Uplay acc`", color=0x666644)
-        embed.add_field(name="Your link:", value="https://direct-link.net/33298/325672", inline=False)
-		embed.add_field(name="Your link #2:", value="https://direct-link.net/33298/326536", inline=False)
-        embed.add_field(name="Invite this bot on your server!", value="https://discordapfp.com/oauth2/authorize?client_id=60496724186339f7376&permissions=8&scope=bot", inline=False)
-        await message.author.send(embed=embed)
-
-        
-    if message.content.startswith("!spotify"):
-        print(message.author.name)
-        embed = discord.Embed(title="`Spotify acc`", color=0x996666)
-        embed.add_field(name="Your link:", value="hhttps://filemedia.net/33298/67676", inline=False)
-		embed.add_field(name="Your link #2:", value="https://filemedia.net/33298/66567", inline=False)
-		embed.add_field(name="Your link #3:", value="hhttps://filemedia.net/33298/65675", inline=False)
-        embed.add_field(name="Invite this bot on your server!", value="https://discordapfp.com/oauth2/authorize?client_id=60496724186339f7376&permissions=8&scope=bot", inline=False)
-        await message.author.send(embed=embed) 
-        
-
-
+    message.content = message.content.lower()
+    author = '{0.author.mention}'.format(message)
+    # we do not want the bot to reply to itself
+    if message.author == client.user:
+        return
+ 
+    if message.content.startswith('!hello'):
+        msg = 'Hello python {0.author.mention}'.format(message)
+        await message.author.send(msg)
+ 
+    if message.content.startswith('!fortnite'):
+        randomlist = ['Not in stock!','Not in stock!','Not in stock!']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.author.send(msg + (random.choice(randomlist)))
+       
+    if message.content.startswith('?ban'):
+        msg = 'https://gifimage.net/wp-content/uploads/2017/07/ban-hammer-gif-14.gif'.format(message)
+        await message.channel.send(msg)
+               
+    if message.content.startswith('!Spotify'):
+        randomlist = ['https://filemedia.net/33298/67676','https://filemedia.net/33298/66567','https://filemedia.net/33298/65675','https://filemedia.net/33298/655645','https://link-to.net/33298/89787']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.author.send(msg + (random.choice(randomlist)))
+       
+    if message.content.startswith('rabbit'):
+        msg = 'https://i.pinimg.com/originals/ea/5b/b4/ea5bb42b167972d4121152caded1bcf4.gif'.format(message)
+        await message.channel.send(msg)  
+           
+    if message.content.startswith('!stock'):
+        randomlist = ['visit #how-to-gen for commands','visit #how-to-gen for commands','visit #how-to-gen for commands']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.author.send(msg + (random.choice(randomlist)))
+       
+    if message.content.startswith('!nord'):
+        randomlist = ['https://direct-link.net/33298/428937','https://link-to.net/33298/43452','https://direct-link.net/33298/47261']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.author.send(msg + (random.choice(randomlist)))
+       
+    if message.content.startswith('!spotify'):
+        randomlist = ['https://filemedia.net/33298/67676','https://filemedia.net/33298/66567','https://filemedia.net/33298/65675','https://filemedia.net/33298/655645','https://link-to.net/33298/89787']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.author.send(msg + (random.choice(randomlist)))
+ 
+    if message.content.startswith('!origin'):
+        randomlist = ['https://filemedia.net/33298/23412','https://filemedia.net/33298/212313','https://filemedia.net/33298/212234']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.author.send(msg + (random.choice(randomlist)))
+               
+    if message.content.startswith('!hulu'):
+        randomlist = ['https://filemedia.net/33298/89089','https://filemedia.net/33298/808098','https://filemedia.net/33298/88798']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.author.send(msg + (random.choice(randomlist)))
+       
+    if message.content.startswith('!steam'):
+        randomlist = ['Not in stock!    ','Not in stock!    ','Not in stock!    ']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.author.send(msg + (random.choice(randomlist)))
+       
+    if message.content.startswith('!udemy'):
+        randomlist = ['Not in stock!','Not in stock!','Not in stock!']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.author.send(msg + (random.choice(randomlist)))
+               
+    if message.content.startswith('!uplay'):
+        randomlist = ['https://direct-link.net/33298/326536','https://direct-link.net/33298/325672']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.author.send(msg + (random.choice(randomlist)))
+       
+    if message.content.startswith('!crunchyroll'):
+        randomlist = ['Not in stock!','Not in stock!','Not in stock!']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.author.send(msg + (random.choice(randomlist)))
+               
+    if message.content.startswith('!scribd'):
+        randomlist = ['Not in stock!','Not in stock!','Not in stock!']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.author.send(msg + (random.choice(randomlist)))
+                       
+    if message.content.startswith('!familyowner'):
+        randomlist = ['Not in stock','Not in stock','Not in stock']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.author.send(msg + (random.choice(randomlist)))
+                               
+    if message.content.startswith('!minecraft'):
+        randomlist = ['https://direct-link.net/33298/76781','https://link-to.net/33298/345353','https://direct-link.net/33298/75681']
+        msg = 'Hello ' + author + '. Your link: '
+        await message.author.send(msg + (random.choice(randomlist)))
+       
+    if message.content.startswith('!help'):
+        await message.author.send("Check #how_to_gen")
+       
+       
+    if message.content.startswith('!purge'):
+        args = message.content.split(" ")
+        a = int(args[1])
+        await message.channel.purge(limit=a)
+    await client.process_commands(message)
    
 @client.event
 async def on_ready():
@@ -139,9 +155,9 @@ async def on_ready():
     print(client.user.id)
     print('------')
     change_status.start()
-
+ 
 @tasks.loop(seconds=5)
 async def change_status():
     await client.change_presence(activity=discord.Game(next(status)))
-
+ 
 client.run(os.getenv('BOT_TOKEN'))
