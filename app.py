@@ -11,7 +11,7 @@ bot = commands.Bot(command_prefix='$')
 
 @bot.event
 async def on_ready():
-    status = cycle(['$help', '$info', 'prefix = $'])
+    status = cycle(['pls help', 'pls info', 'prefix = pls '])
     await bot.change_presence(activity=discord.Game(next(status)))
     print('Logged in as')
     print(bot.user.name)
@@ -77,14 +77,14 @@ async def info(ctx):
     await ctx.send(embed=embed)
 
 bot.remove_command('help')
-
+!
 # NSFW #https://cdn.discordapp.com/attachments/622754558862688256/622755203153920020/Hnet-image_1.gif
 
 @bot.command()
 async def nsfw(ctx):
-    check_role = get(ctx.message.guild.roles, name='MemeLord')
+    check_role = get(ctx.message.guild.roles, name='Leader')
     if check_role in ctx.author.roles:
-       channel = bot.get_channel(601008621123403776)
+       channel = bot.get_channel(611574273588461580)
        randomlist = ['https://cdn.someecards.com/posts/imagefromios-42-m6fQfC.jpg ', ' https://cdn.someecards.com/posts/imagefromios-39-N59YZ9.jpg ', ' https://cdn.discordapp.com/attachments/622754558862688256/622755203153920020/Hnet-image_1.gif ', '  https://cdn.discordapp.com/attachments/622754558862688256/622755203153920020/Hnet-image_1.gif ', ' https://img-9gag-fun.9cache.com/photo/aZ7ppwW_460swp.webp ', ' https://img-9gag-fun.9cache.com/photo/a5Rr7YN_460swp.webp ', ' https://img-9gag-fun.9cache.com/photo/a2R5mBe_460swp.webp', 'https://img-9gag-fun.9cache.com/photo/aY7LwV7_460swp.webp ', ' https://img-9gag-fun.9cache.com/photo/aV0eXww_460swp.webp ', ' https://img-9gag-fun.9cache.com/photo/avonL0n_460swp.webp ', ' https://img-9gag-fun.9cache.com/photo/aPRWy1Q_460swp.webp ', ' https://img-9gag-fun.9cache.com/photo/avonZ8d_460swp.webp ', ' https://img-9gag-fun.9cache.com/photo/a1RXZeD_460swp.webp ', ' https://img-9gag-fun.9cache.com/photo/a2R5NAD_460swp.webp ', ' https://img-9gag-fun.9cache.com/photo/aO0vqwv_460swp.webp ', ' https://img-9gag-fun.9cache.com/photo/am5zX94_460swp.webp ', ' https://img-9gag-fun.9cache.com/photo/a7wdLmx_460swp.webp ', ' https://img-9gag-fun.9cache.com/photo/aMY91Ax_460swp.webp ', ' https://img-9gag-fun.9cache.com/photo/a0Rj8OO_460swp.webp ', ' https://img-9gag-fun.9cache.com/photo/a0Rj8YB_460swp.webp ', ' https://img-9gag-fun.9cache.com/photo/aV0ez38_460swp.webp ', ' https://img-9gag-fun.9cache.com/photo/aGgDK0K_460swp.webp ']
        await channel.send(random.choice(randomlist))
        await ctx.send('*hint: bot sending nsfw commands only into nsfw channel! check #nsfw*')
@@ -98,13 +98,13 @@ async def nsfw(ctx):
 async def help(ctx):
     embed = discord.Embed(title="__**Commands:**__", description="", color=0xeee657)
 
-    embed.add_field(name="$greet", value="Gives a nice greet message", inline=False)
-    embed.add_field(name="$cat", value="Gives a cute cat gif to lighten up the mood.", inline=False)
-    embed.add_field(name="$dog", value="Gives a cute dog gif to lighten up the mood", inline=False)
-    embed.add_field(name="$rabbit", value="Gives a cute rabbit gif to lighten up the mood", inline=False)
-    embed.add_field(name="$trump", value="Gives a funny Donald trump gif", inline=False)
-    embed.add_field(name="$info", value="Gives a little info about the bot", inline=False)
-    embed.add_field(name="$help", value="Gives this message", inline=False)
+    embed.add_field(name="pls greet", value="Gives a nice greet message", inline=False)
+    embed.add_field(name="pls cat", value="Gives a cute cat gif to lighten up the mood.", inline=False)
+    embed.add_field(name="pls dog", value="Gives a cute dog gif to lighten up the mood", inline=False)
+    embed.add_field(name="pls rabbit", value="Gives a cute rabbit gif to lighten up the mood", inline=False)
+    embed.add_field(name="pls trump", value="Gives a funny Donald trump gif", inline=False)
+    embed.add_field(name="pls info", value="Gives a little info about the bot", inline=False)
+    embed.add_field(name="pls help", value="Gives this message", inline=False)
 
     await ctx.send(embed=embed)
  
