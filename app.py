@@ -5,7 +5,7 @@ from itertools import cycle
 from discord.utils import get
 import os
 
-bot = commands.Bot(command_prefix='$')
+bot = commands.Bot(command_prefix='pls ')
 
 #BlackRabbit001
 
