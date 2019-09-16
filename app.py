@@ -77,7 +77,6 @@ async def info(ctx):
     await ctx.send(embed=embed)
 
 bot.remove_command('help')
-!
 # NSFW #https://cdn.discordapp.com/attachments/622754558862688256/622755203153920020/Hnet-image_1.gif
 
 @bot.command()
