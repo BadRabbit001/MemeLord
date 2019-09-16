@@ -5,13 +5,13 @@ from itertools import cycle
 from discord.utils import get
 import os
 
-bot = commands.Bot(command_prefix='$')
+bot = commands.Bot(command_prefix='pls ')
 
 #BlackRabbit001
 
 @bot.event
 async def on_ready():
-    status = cycle(['$help', '$info', 'prefix = $'])
+    status = cycle(['pls help', 'pls info', 'prefix = pls '])
     await bot.change_presence(activity=discord.Game(next(status)))
     print('Logged in as')
     print(bot.user.name)
@@ -97,13 +97,13 @@ async def nsfw(ctx):
 async def help(ctx):
     embed = discord.Embed(title="__**Commands:**__", description="", color=0xeee657)
 
-    embed.add_field(name="$greet", value="Gives a nice greet message", inline=False)
-    embed.add_field(name="$cat", value="Gives a cute cat gif to lighten up the mood.", inline=False)
-    embed.add_field(name="$dog", value="Gives a cute dog gif to lighten up the mood", inline=False)
-    embed.add_field(name="$rabbit", value="Gives a cute rabbit gif to lighten up the mood", inline=False)
-    embed.add_field(name="$trump", value="Gives a funny Donald trump gif", inline=False)
-    embed.add_field(name="$info", value="Gives a little info about the bot", inline=False)
-    embed.add_field(name="$help", value="Gives this message", inline=False)
+    embed.add_field(name="pls greet", value="Gives a nice greet message", inline=False)
+    embed.add_field(name="pls cat", value="Gives a cute cat gif to lighten up the mood.", inline=False)
+    embed.add_field(name="pls dog", value="Gives a cute dog gif to lighten up the mood", inline=False)
+    embed.add_field(name="pls rabbit", value="Gives a cute rabbit gif to lighten up the mood", inline=False)
+    embed.add_field(name="pls trump", value="Gives a funny Donald trump gif", inline=False)
+    embed.add_field(name="pls info", value="Gives a little info about the bot", inline=False)
+    embed.add_field(name="pls help", value="Gives this message", inline=False)
 
     await ctx.send(embed=embed)
  
