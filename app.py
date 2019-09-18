@@ -33,7 +33,7 @@ async def greet(ctx):
 async def cat(ctx):
   channel = bot.get_channel(623200282217545728)
   randomlist = ['https://media2.giphy.com/media/JIX9t2j0ZTN9S/200w.webp?cid=790b7611398f812db0b6a71b54e076ca2b47099d66f1e121&rid=200w.webp','https://media0.giphy.com/media/mlvseq9yvZhba/giphy.webp?cid=790b7611398f812db0b6a71b54e076ca2b47099d66fe121&rid=giphy.webp','https://media3.giphy.com/media/13CoXDiaCcCoyk/200.webp?cid=790b7611398f812db0b6a71b54e076ca2b47099d66f1e121&rid=200.webp']
-  await channel.send(random.choice(randomlist))
+  await ctx.send(random.choice(randomlist))
   await ctx.send(sfw_message)
 
 
@@ -43,14 +43,14 @@ async def cat(ctx):
 async def dog(ctx):
  channel = bot.get_channel(623200282217545728)
  randomlist = ['https://media0.giphy.com/media/4Zo41lhzKt6iZ8xff9/giphy.webp?cid=790b761139768976647e0ed59d69a651fe5147950a7194e9&rid=giphy.webp','https://media.giphy.com/media/21GCae4djDWtP5soiY/giphy.gif','https://media0.giphy.com/media/k2Da0Uzaxo9xe/200.webp?cid=790b761139768976647e0ed59d69a651fe5147950a7194e9&rid=200.webp ', 'https://media.giphy.com/media/QvBoMEcQ7DQXK/giphy.gif ', ' https://media.giphy.com/media/syhXT4VR0D3iM/giphy.gif ', ' https://media.giphy.com/media/U7ZUd5eXfHMgE/giphy.gif ', ' https://media.giphy.com/media/3zlnLYzubrKzGHW9pM/giphy.gif ', ' https://media.giphy.com/media/1ToYwxru1X4Gc/giphy.gif ', ' https://media.giphy.com/media/tR8dmuLBm5OAE/giphy.gif ', ' https://media.giphy.com/media/P7hIImx7r1sas/giphy.gif ']
- await channel.send(random.choice(randomlist))
+ await ctx.send(random.choice(randomlist))
  await ctx.send(sfw_message)
  
 @bot.command()
 async def rabbit(ctx):
  channel = bot.get_channel(623200282217545728)
  randomlist = ['https://media.giphy.com/media/N6QMlgXmovw40/giphy.gif ', ' https://media.giphy.com/media/zYKAv43m7MbAI/giphy.gif ', ' https://media.giphy.com/media/8nv5NfqUxWJt6/giphy.gif ', ' https://media.giphy.com/media/10CVvg9noXwPu0/giphy.gif ', ' https://media.giphy.com/media/7MIUT26hrGy76/giphy.gif ', ' https://media.giphy.com/media/laEzcttbkwPzq/giphy.gif ', ' https://media.giphy.com/media/g2n5wagSFzBMk/giphy.gif ', ' https://media.giphy.com/media/14tf9peZdntGxO/giphy.gif ', ' https://media.giphy.com/media/129FklkXsetHl6/giphy.gif ', ' https://media.giphy.com/media/sWyM7JpUxvV9m/giphy.gif ', ' ']
- await channel.send(random.choice(randomlist))
+ await ctx.send(random.choice(randomlist))
  await ctx.send(sfw_message)
  
  
@@ -58,7 +58,7 @@ async def rabbit(ctx):
 async def trump(ctx):
  channel = bot.get_channel(623200282217545728)
  randomlist = ['https://media.giphy.com/media/hPPx8yk3Bmqys/giphy.gif ', ' https://media.giphy.com/media/xTiTnHXbRoaZ1B1Mo8/giphy.gif ', ' https://media.giphy.com/media/E9oadOOmD27jG/giphy.gif ', ' https://media.giphy.com/media/ckIT1yCv6wIyk/giphy.gif ', ' https://media.giphy.com/media/rzKSHEMN0lVkc/giphy.gif ', ' https://media.giphy.com/media/7JI6mrDzbBHJcROiCZ/giphy.gif ', ' https://media.giphy.com/media/9VyXtiyGwPNFPL51sA/giphy.gif ', ' https://media.giphy.com/media/ySFtYLc51D3pK/giphy.gif ', '']
- await channel.send(random.choice(randomlist))
+ await ctx.send(random.choice(randomlist))
  await ctx.send(sfw_message)
  
 @bot.command()
